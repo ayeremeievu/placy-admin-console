@@ -1,0 +1,26 @@
+@import 'src/styles/shared/_vars.scss';
+
+.placy-navbar {
+    &__brand {
+        margin: 10px 30px;
+    }
+
+    &__nav {
+        display: flex;
+    }
+
+    &__nav-item {
+        margin-right: 10px;
+        color: $white;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .nav-link {
+            &--active {
+                // background-color: blue;
+            }
+        }
+    }
+}

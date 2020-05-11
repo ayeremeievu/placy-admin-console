@@ -1,0 +1,8 @@
+@import 'src/styles/shared/_vars.scss';
+
+.brand {
+    &__name {
+        font-size: 1.5rem;
+        color: $white;
+    }
+}

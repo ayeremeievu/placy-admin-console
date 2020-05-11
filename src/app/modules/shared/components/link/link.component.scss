@@ -1,0 +1,12 @@
+@import 'src/styles/shared/_vars.scss';
+
+.link {
+    &__ref {
+        &.white-color {
+            color: $white;
+        }
+        &.light-color {
+            color: $light;
+        }
+    }
+}
