@@ -23,4 +23,12 @@ export class ConfigService {
     public getApiUrl() {
         return this.getHost() + this.getApiUrlPrevix();
     }
+
+    public getCoreWebServicecModuleName() {
+        return generalConfig.coreWebServicesName;
+    }
+
+    public getCoreWebServicesUrl() {
+        return this.getApiUrl() + this.getCoreWebServicecModuleName();
+    }
 }

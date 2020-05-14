@@ -1,0 +1,15 @@
+<div class="param">
+    <div class="param__headline">
+        <i class="param__headline-text">Params</i>
+    </div>
+
+    <div class="param__data">
+        <span class="param__label">Code</span>
+        <span class="param__code">{{ param.code }}</span>
+        <br />
+        <div *ngIf="param.defaultValue" class="param__default-value">
+            <span class="param__label">Default Value</span>
+            <span class="param__default-value-span">{{ param.defaultValue }}</span>
+        </div>
+    </div>
+</div>

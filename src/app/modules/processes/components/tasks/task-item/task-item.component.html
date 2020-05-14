@@ -1,3 +1,19 @@
-<p>
-  task-item works!
-</p>
+<div class="task-item">
+    <div class="task-title">
+        <div class="task-title__headline">
+            <div class="task-headline__text">
+                <div class="task-headline__name">
+                    <span class="task-item__label">Name</span> <span class="task-name">{{ task.name }}</span>
+                </div>
+                <div class="task-headline__code">
+                    <span class="task-item__label">Code</span><span class="task-code">{{ task.code }}</span>
+                </div>
+            </div>
+            <div class="task-headline__actions">
+                Button
+            </div>
+        </div>
+    </div>
+
+    <app-params-list class="task-item__params" [params]="task.params"></app-params-list>
+</div>

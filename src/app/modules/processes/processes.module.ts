@@ -7,6 +7,8 @@ import { TaskItemComponent } from './components/tasks/task-item/task-item.compon
 import { ProcessesListComponent } from './components/processes/processes-list/processes-list.component';
 import { ProcessItemComponent } from './components/processes/process-item/process-item.component';
 import { TasksListComponent } from './components/tasks/tasks-list/tasks-list.component';
+import { ParamComponent } from './components/params/param/param.component';
+import { ParamsListComponent } from './components/params/params-list/params-list.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,9 @@ import { TasksListComponent } from './components/tasks/tasks-list/tasks-list.com
         TaskItemComponent,
         ProcessesListComponent,
         ProcessItemComponent,
-        TasksListComponent
+        TasksListComponent,
+        ParamComponent,
+        ParamsListComponent
     ],
     imports: [CommonModule, SharedModule]
 })

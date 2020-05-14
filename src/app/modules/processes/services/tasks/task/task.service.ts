@@ -12,14 +12,14 @@ import { Task } from '../../../model/task';
 export class TaskService {
     constructor(private http: HttpClient, private configService: ConfigService) {}
 
-    public getAllTasks(): Observable<Task> {
-        const userUrl = this.configService.getApiUrl() + apiRequestsConstants.tasks;
+    public getAllTasks(): Observable<Array<Task>> {
+        const userUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.tasks;
 
         const pathParams = new Map();
         // pathParams.set('user', this.CURRENT_USER_NAME);
 
         const requestUrl = RequestUrlBuilder.buildUrl(userUrl, pathParams);
 
-        return this.http.get<Task>(requestUrl);
+        return this.http.get<Array<Task>>(requestUrl);
     }
 }

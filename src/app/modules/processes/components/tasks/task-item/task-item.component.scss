@@ -1,0 +1,43 @@
+.task-item {
+    margin-bottom: 2rem;
+
+    border-radius: 3px;
+    border: 1px solid black;
+
+    &__title {
+        padding: 1rem 2rem;
+    }
+
+    &__params {
+        border-top: 1px solid black;
+        padding: 0.5rem 2rem;
+    }
+
+    &__label {
+        margin-right: 2rem;
+    }
+}
+.task-headline {
+    &__text {
+        width: 80%;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+    }
+
+    &__code {
+        font-size: 1.2rem;
+    }
+
+    &__actions {
+        width: 20%;
+    }
+}
+
+.task-title {
+    padding: 0.5rem 2rem;
+    &__headline {
+        display: flex;
+    }
+}
