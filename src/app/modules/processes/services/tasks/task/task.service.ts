@@ -13,13 +13,24 @@ export class TaskService {
     constructor(private http: HttpClient, private configService: ConfigService) {}
 
     public getAllTasks(): Observable<Array<Task>> {
-        const userUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.tasks;
+        const tasksUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.tasks;
 
         const pathParams = new Map();
-        // pathParams.set('user', this.CURRENT_USER_NAME);
 
-        const requestUrl = RequestUrlBuilder.buildUrl(userUrl, pathParams);
+        const requestUrl = RequestUrlBuilder.buildUrl(tasksUrl, pathParams);
 
         return this.http.get<Array<Task>>(requestUrl);
+    }
+
+    public getTaskByCode(code: string): Observable<Task> {
+        const taskUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.task;
+
+        const pathParams = new Map();
+
+        pathParams.set('code', code);
+
+        const requestUrl = RequestUrlBuilder.buildUrl(taskUrl, pathParams);
+
+        return this.http.get<Task>(requestUrl);
     }
 }

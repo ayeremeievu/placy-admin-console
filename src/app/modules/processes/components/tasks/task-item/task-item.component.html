@@ -10,7 +10,11 @@
                 </div>
             </div>
             <div class="task-headline__actions">
-                Button
+                <app-link-button
+                    [linkUrl]="'/tasks/{code}/create' | resolveUrl: { name: 'code', value: task.code }"
+                    [buttonText]="'RUN'"
+                >
+                </app-link-button>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 export class apiRequestsConstants {
     static tasks = '/tasks';
-    static task = '/tasks/{userId}';
+    static task = '/tasks/{code}';
 
     static processes = '/processes';
-    static process = '/processes/{userId}';
+    static process = '/processes/{code}';
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Process } from '../../../model/process';
+import { ProcessService } from '../../../services/processes/process/process.service';
 
 @Component({
     selector: 'app-processes-list',
@@ -6,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./processes-list.component.scss']
 })
 export class ProcessesListComponent implements OnInit {
-    constructor() {}
+    processes: Array<Process>;
 
-    ngOnInit() {}
+    constructor(protected processService: ProcessService) {}
+
+    ngOnInit() {
+        this.processService.getAllProcesses().subscribe(processes => {
+            this.processes = processes;
+        });
+    }
 }

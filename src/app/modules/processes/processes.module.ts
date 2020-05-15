@@ -9,6 +9,9 @@ import { ProcessItemComponent } from './components/processes/process-item/proces
 import { TasksListComponent } from './components/tasks/tasks-list/tasks-list.component';
 import { ParamComponent } from './components/params/param/param.component';
 import { ParamsListComponent } from './components/params/params-list/params-list.component';
+import { ProcessCreateComponent } from './containers/pages/processes/process-create/process-create.component';
+import { TaskCreateComponent } from './containers/pages/tasks/task-create/task-create.component';
+import { TaskCreateFormComponent } from './containers/pages/tasks/task-create/task-create-form/task-create-form/task-create-form.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +22,10 @@ import { ParamsListComponent } from './components/params/params-list/params-list
         ProcessItemComponent,
         TasksListComponent,
         ParamComponent,
-        ParamsListComponent
+        ParamsListComponent,
+        TaskCreateComponent,
+        ProcessCreateComponent,
+        TaskCreateFormComponent
     ],
     imports: [CommonModule, SharedModule]
 })

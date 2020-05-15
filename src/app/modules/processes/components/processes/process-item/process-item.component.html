@@ -1,3 +1,23 @@
-<p>
-  process-item works!
-</p>
+<div class="process-item">
+    <div class="process-title">
+        <div class="process-title__headline">
+            <div class="process-headline__text">
+                <div class="process-headline__name">
+                    <span class="process-item__label">Name</span> <span class="process-name">{{ process.name }}</span>
+                </div>
+                <div class="process-headline__code">
+                    <span class="process-item__label">Code</span><span class="process-code">{{ process.code }}</span>
+                </div>
+            </div>
+            <div class="process-headline__actions">
+                <app-link-button
+                    [linkUrl]="'/processes/{code}/create' | resolveUrl: { name: 'code', value: process.code }"
+                    [buttonText]="'RUN'"
+                >
+                </app-link-button>
+            </div>
+        </div>
+    </div>
+
+    <app-params-list class="process-item__params" [params]="process.params"></app-params-list>
+</div>
