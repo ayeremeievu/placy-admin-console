@@ -1,3 +1,8 @@
 <div class="task-create-form">
     <app-title class="task-create-form__title" [text]="task.code"></app-title>
+    <app-params-forms
+        class="task-params-forms"
+        [params]="task.params"
+        (onValuesChanged)="onParamsChanged($event)"
+    ></app-params-forms>
 </div>

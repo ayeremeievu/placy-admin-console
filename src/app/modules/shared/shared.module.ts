@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { LinkButtonComponent } from './components/link-button/link-button.component';
 import { ResolveUrlPipe } from './pipes/resolve-url.pipe';
 import { TitleComponent } from './components/title/title.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { TitleComponent } from './components/title/title.component';
         LinkComponent,
         LinkButtonComponent,
         ResolveUrlPipe,
-        TitleComponent
+        TitleComponent,
+        InputComponent
     ],
     exports: [HeadlineComponent, LogoComponent, LinkComponent, LinkButtonComponent, ResolveUrlPipe, TitleComponent],
     imports: [CommonModule, RouterModule]

@@ -12,6 +12,8 @@ import { ParamsListComponent } from './components/params/params-list/params-list
 import { ProcessCreateComponent } from './containers/pages/processes/process-create/process-create.component';
 import { TaskCreateComponent } from './containers/pages/tasks/task-create/task-create.component';
 import { TaskCreateFormComponent } from './containers/pages/tasks/task-create/task-create-form/task-create-form/task-create-form.component';
+import { ParamFormsComponent } from './components/params/param-forms/param-forms.component';
+import { ParamInputComponent } from './components/params/param-input/param-input.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +27,9 @@ import { TaskCreateFormComponent } from './containers/pages/tasks/task-create/ta
         ParamsListComponent,
         TaskCreateComponent,
         ProcessCreateComponent,
-        TaskCreateFormComponent
+        TaskCreateFormComponent,
+        ParamFormsComponent,
+        ParamInputComponent
     ],
     imports: [CommonModule, SharedModule]
 })

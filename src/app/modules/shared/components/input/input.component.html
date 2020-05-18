@@ -1,0 +1,10 @@
+<div class="input-group">
+    <label>{{ text }}</label>
+    <input
+        type="text"
+        class="form-control"
+        placeholder="{{ placeholder }}"
+        [(ngModel)]="{{value}}"
+        (blur)="onBlur($event)"
+    />
+</div>
