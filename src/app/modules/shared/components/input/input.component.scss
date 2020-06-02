@@ -1,0 +1,15 @@
+.placy-input {
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+
+    &__label {
+        padding: 0.5rem 1rem;
+    }
+
+    &__input {
+        flex: 1 1 auto;
+        padding: 1rem 2rem;
+        height: 2.5rem;
+    } 
+}

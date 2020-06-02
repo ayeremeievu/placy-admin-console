@@ -17,7 +17,7 @@ export class ParamFormsComponent implements OnInit {
     @Output()
     valuesChanged: EventEmitter<Array<ParamValue>> = new EventEmitter<Array<ParamValue>>();
 
-    constructor() {}
+    constructor() { }
 
     ngOnInit() {
         this.paramValues = new Array<ParamValue>();
@@ -38,8 +38,6 @@ export class ParamFormsComponent implements OnInit {
     }
 
     getValueByParamCode(code: string): ParamValue {
-        return this.paramValues.find(paramValue => {
-            paramValue.code == code;
-        });
+        return this.paramValues.find(paramValue => paramValue.code == code);
     }
 }

@@ -1,10 +1,5 @@
-<div class="input-group">
-    <label>{{ text }}</label>
-    <input
-        type="text"
-        class="form-control"
-        placeholder="{{ placeholder }}"
-        [(ngModel)]="{{value}}"
-        (blur)="onBlur($event)"
-    />
+<div class="placy-input input-group">
+    <label class="placy-input__label">{{ text }}</label>
+    <input type="text" class="placy-input__input form-control" placeholder="{{ placeholder }}" [(ngModel)]="value"
+        (blur)="onBlur($event)" />
 </div>

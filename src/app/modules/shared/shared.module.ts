@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { HeadlineComponent } from './components/headline/headline.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { LinkComponent } from './components/link/link.component';
@@ -19,7 +20,7 @@ import { InputComponent } from './components/input/input.component';
         TitleComponent,
         InputComponent
     ],
-    exports: [HeadlineComponent, LogoComponent, LinkComponent, LinkButtonComponent, ResolveUrlPipe, TitleComponent],
-    imports: [CommonModule, RouterModule]
+    exports: [HeadlineComponent, LogoComponent, LinkComponent, LinkButtonComponent, ResolveUrlPipe, TitleComponent, InputComponent],
+    imports: [CommonModule, RouterModule, FormsModule]
 })
-export class SharedModule {}
+export class SharedModule { }

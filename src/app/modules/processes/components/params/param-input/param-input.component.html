@@ -1,7 +1,2 @@
-<app-input
-    class="param-input__input"
-    [text]="param.code"
-    [placeholder]="Param value"
-    [defaultValue]="param.defaultValue"
-    (valueChanged)="onValueChanged($event)"
-></app-input>
+<app-input class="param-input__input" [text]="param.code" [placeholder]="'Param value'"
+    [defaultValue]="param.defaultValue" (valueChanged)="onValueChanged($event)"></app-input>
