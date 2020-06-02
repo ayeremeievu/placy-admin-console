@@ -13,9 +13,9 @@ export class ParamInputComponent implements OnInit {
     @Output()
     valueChanged: EventEmitter<string> = new EventEmitter<string>();
 
-    constructor() {}
+    constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() { }
 
     onValueChanged(value) {
         this.valueChanged.emit(value);

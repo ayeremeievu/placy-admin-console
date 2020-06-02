@@ -1,3 +1,9 @@
 .task-create-form {
     border: 1px solid black;
+
+    &__actions {
+        margin-left: 2.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }

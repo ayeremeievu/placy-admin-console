@@ -20,11 +20,12 @@ export class InputComponent implements OnInit {
 
     value: string;
 
-    constructor() {}
+    constructor() { }
 
     ngOnInit() {
         if (this.defaultValue) {
             this.value = this.defaultValue;
+            this.valueChanged.emit(this.value);
         }
     }
 

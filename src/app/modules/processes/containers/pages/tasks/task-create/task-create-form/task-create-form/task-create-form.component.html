@@ -1,5 +1,9 @@
 <div class="task-create-form">
-    <app-title class="task-create-form__title" [text]="task.code"></app-title>
-    <app-param-forms class="task-params-forms" [params]="task.params" (onValuesChanged)="onParamsChanged($event)">
+    <app-title class="task-create-form__title" [text]="task?.code"></app-title>
+    <app-param-forms class="task-params-forms" [task$]="task$" (valuesChanged)="onParamsChanged($event)">
     </app-param-forms>
+    <div class="task-create-form__actions">
+        <app-button [buttonText]="'RUN'" (click)="runTask()">
+        </app-button>
+    </div>
 </div>

@@ -9,6 +9,7 @@ import { LinkButtonComponent } from './components/link-button/link-button.compon
 import { ResolveUrlPipe } from './pipes/resolve-url.pipe';
 import { TitleComponent } from './components/title/title.component';
 import { InputComponent } from './components/input/input.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
     declarations: [
@@ -18,9 +19,10 @@ import { InputComponent } from './components/input/input.component';
         LinkButtonComponent,
         ResolveUrlPipe,
         TitleComponent,
-        InputComponent
+        InputComponent,
+        ButtonComponent
     ],
-    exports: [HeadlineComponent, LogoComponent, LinkComponent, LinkButtonComponent, ResolveUrlPipe, TitleComponent, InputComponent],
+    exports: [HeadlineComponent, LogoComponent, LinkComponent, LinkButtonComponent, ResolveUrlPipe, TitleComponent, InputComponent, ButtonComponent],
     imports: [CommonModule, RouterModule, FormsModule]
 })
 export class SharedModule { }

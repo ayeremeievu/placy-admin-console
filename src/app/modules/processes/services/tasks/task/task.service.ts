@@ -5,12 +5,14 @@ import { Observable } from 'rxjs';
 import { apiRequestsConstants } from 'src/app/modules/shared/constants/api-requests';
 import { RequestUrlBuilder } from 'src/app/modules/shared/utils/request-url-builder';
 import { Task } from '../../../model/task';
+import { CreateTaskData } from '../../../model/createTaskData';
 
 @Injectable({
     providedIn: 'root'
 })
 export class TaskService {
-    constructor(private http: HttpClient, private configService: ConfigService) {}
+
+    constructor(private http: HttpClient, private configService: ConfigService) { }
 
     public getAllTasks(): Observable<Array<Task>> {
         const tasksUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.tasks;
@@ -32,5 +34,11 @@ export class TaskService {
         const requestUrl = RequestUrlBuilder.buildUrl(taskUrl, pathParams);
 
         return this.http.get<Task>(requestUrl);
+    }
+
+    runTask(createTaskData: CreateTaskData) {
+        const tasksUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.taskInstance
+
+        this.http.post<any>(tasksUrl, createTaskData).subscribe(response => console.log(response));
     }
 }

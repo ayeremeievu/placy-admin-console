@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Param } from 'src/app/modules/processes/model/param';
 import { ParamValue } from 'src/app/modules/processes/model/paramValue';
+import { Task } from '../../../model/task';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-param-forms',
@@ -9,9 +11,8 @@ import { ParamValue } from 'src/app/modules/processes/model/paramValue';
 })
 export class ParamFormsComponent implements OnInit {
     @Input()
-    params: Array<Param>;
+    task$: Observable<Task>;
 
-    @Input()
     paramValues: Array<ParamValue>;
 
     @Output()
@@ -22,19 +23,26 @@ export class ParamFormsComponent implements OnInit {
     ngOnInit() {
         this.paramValues = new Array<ParamValue>();
 
-        this.params.forEach(param => {
-            let paramValue = new ParamValue();
+        this.task$.subscribe(task => {
 
-            paramValue.code = param.code;
+            if (task) {
+                task.params.forEach(param => {
+                    let paramValue = new ParamValue();
 
-            this.paramValues.push(paramValue);
-        });
+                    paramValue.code = param.code;
+
+                    this.paramValues.push(paramValue);
+                });
+            }
+        })
     }
 
-    onValueChanged(value: string, param: Param) {
+    onValueChanged(newParamValue: string, param: Param) {
         let paramValue = this.getValueByParamCode(param.code);
 
-        paramValue.value = value;
+        paramValue.value = newParamValue;
+
+        this.valuesChanged.emit(this.paramValues);
     }
 
     getValueByParamCode(code: string): ParamValue {
