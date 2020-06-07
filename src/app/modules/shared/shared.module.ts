@@ -10,6 +10,8 @@ import { ResolveUrlPipe } from './pipes/resolve-url.pipe';
 import { TitleComponent } from './components/title/title.component';
 import { InputComponent } from './components/input/input.component';
 import { ButtonComponent } from './components/button/button.component';
+import { AlertComponent } from './components/alert/alert/alert.component';
+import { AlertService } from './components/alert/alert.service';
 
 @NgModule({
     declarations: [
@@ -20,9 +22,11 @@ import { ButtonComponent } from './components/button/button.component';
         ResolveUrlPipe,
         TitleComponent,
         InputComponent,
-        ButtonComponent
+        ButtonComponent,
+        AlertComponent
     ],
-    exports: [HeadlineComponent, LogoComponent, LinkComponent, LinkButtonComponent, ResolveUrlPipe, TitleComponent, InputComponent, ButtonComponent],
-    imports: [CommonModule, RouterModule, FormsModule]
+    exports: [HeadlineComponent, LogoComponent, LinkComponent, LinkButtonComponent, ResolveUrlPipe, TitleComponent, InputComponent, ButtonComponent, AlertComponent],
+    imports: [CommonModule, RouterModule, FormsModule],
+    providers: [AlertService]
 })
 export class SharedModule { }

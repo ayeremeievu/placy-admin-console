@@ -5,6 +5,7 @@ import { Param } from 'src/app/modules/processes/model/param';
 import { CreateTaskData } from 'src/app/modules/processes/model/createTaskData';
 import { ParamValue } from 'src/app/modules/processes/model/paramValue';
 import { TaskService } from '../../../../../../services/tasks/task/task.service';
+import { AlertService } from '../../../../../../../shared/components/alert/alert.service';
 
 @Component({
     selector: 'app-task-create-form',
@@ -19,7 +20,13 @@ export class TaskCreateFormComponent implements OnInit {
 
     createTaskData: CreateTaskData;
 
-    constructor(protected taskService: TaskService) { }
+    alertOptions = {
+        autoClose: false,
+        keepAfterRouteChange: false,
+        id: 'create-task-response'
+    }
+
+    constructor(protected taskService: TaskService, protected alertService: AlertService) { }
 
     ngOnInit() {
         this.createTaskData = new CreateTaskData();
@@ -36,6 +43,11 @@ export class TaskCreateFormComponent implements OnInit {
     }
 
     runTask() {
-        this.taskService.runTask(this.createTaskData);
+        this.taskService.runTask(this.createTaskData).subscribe(
+            success => this.alertService.success("The task was created successfull", this.alertOptions),
+            error => this.alertService.error(
+                "Error occured during task creation : '" + error.error.message + "'. Status: " + error.status,
+                this.alertOptions)
+        );
     }
 }

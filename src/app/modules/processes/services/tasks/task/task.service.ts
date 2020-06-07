@@ -6,6 +6,7 @@ import { apiRequestsConstants } from 'src/app/modules/shared/constants/api-reque
 import { RequestUrlBuilder } from 'src/app/modules/shared/utils/request-url-builder';
 import { Task } from '../../../model/task';
 import { CreateTaskData } from '../../../model/createTaskData';
+import { TaskInstance } from '../../../model/taskInstance';
 
 @Injectable({
     providedIn: 'root'
@@ -36,9 +37,15 @@ export class TaskService {
         return this.http.get<Task>(requestUrl);
     }
 
-    runTask(createTaskData: CreateTaskData) {
-        const tasksUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.taskInstance
+    runTask(createTaskData: CreateTaskData): Observable<any> {
+        const tasksUrl = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.taskInstances
 
-        this.http.post<any>(tasksUrl, createTaskData).subscribe(response => console.log(response));
+        return this.http.post<any>(tasksUrl, createTaskData);
+    }
+
+    public getTaskInstances(): Observable<TaskInstance[]> {
+        const url = this.configService.getCoreWebServicesUrl() + apiRequestsConstants.taskInstances;
+
+        return this.http.get<TaskInstance[]>(url);
     }
 }

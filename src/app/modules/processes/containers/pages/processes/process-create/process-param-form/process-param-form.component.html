@@ -1,0 +1,4 @@
+<div class="params-form">
+    <app-param-input class="params-form__param" [param]="param" (valueChanged)="onValueChanged($event, param)"
+        *ngFor="let param of (process$ | async)?.params; let i = index"></app-param-input>
+</div>

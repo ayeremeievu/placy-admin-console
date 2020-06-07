@@ -14,6 +14,13 @@ import { TaskCreateComponent } from './containers/pages/tasks/task-create/task-c
 import { TaskCreateFormComponent } from './containers/pages/tasks/task-create/task-create-form/task-create-form/task-create-form.component';
 import { ParamFormsComponent } from './components/params/param-forms/param-forms.component';
 import { ParamInputComponent } from './components/params/param-input/param-input.component';
+import { ProcessCreateFormComponent } from './containers/pages/processes/process-create/process-create-form/process-create-form.component';
+import { ProcessParamFormComponent } from './containers/pages/processes/process-create/process-param-form/process-param-form.component';
+import { TaskInstancesComponent } from './containers/pages/task-instances/task-instances.component';
+import { ProcessInstancesComponent } from './containers/pages/process-instances/process-instances.component';
+import { TaskInstanceItemComponent } from './containers/pages/task-instances/task-instance-item/task-instance-item.component';
+import { ProcessInstanceItemComponent } from './containers/pages/process-instances/process-instance-item/process-instance-item.component';
+import { ProcessStepInstanceComponent } from './containers/pages/process-instances/process-step-instance/process-step-instance.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +36,14 @@ import { ParamInputComponent } from './components/params/param-input/param-input
         ProcessCreateComponent,
         TaskCreateFormComponent,
         ParamFormsComponent,
-        ParamInputComponent
+        ParamInputComponent,
+        ProcessCreateFormComponent,
+        ProcessParamFormComponent,
+        TaskInstancesComponent,
+        ProcessInstancesComponent,
+        TaskInstanceItemComponent,
+        ProcessInstanceItemComponent,
+        ProcessStepInstanceComponent
     ],
     imports: [CommonModule, SharedModule]
 })

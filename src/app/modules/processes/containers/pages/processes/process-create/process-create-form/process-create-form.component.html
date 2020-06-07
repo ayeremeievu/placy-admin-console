@@ -1,0 +1,11 @@
+<div class="process-create-form">
+    <app-title class="process-create-form__title" [text]="process?.code"></app-title>
+    <app-process-param-form class="process-params-forms" [process$]="process$"
+        (valuesChanged)="onParamsChanged($event)">
+    </app-process-param-form>
+    <div class="process-create-form__actions">
+        <app-button [buttonText]="'RUN'" (click)="runProcess()">
+        </app-button>
+    </div>
+    <app-alert [id]="'create-process-response'"></app-alert>
+</div>
