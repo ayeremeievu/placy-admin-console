@@ -1,0 +1,66 @@
+.process-instance-item {
+    margin-bottom: 2rem;
+
+    border-radius: 3px;
+    border: 1px solid black;
+
+    &__title {
+        padding: 1rem 2rem;
+    }
+
+    &__params {
+        border-top: 1px solid black;
+        padding: 0.5rem 2rem;
+    }
+
+    &__label {
+        margin-right: 2rem;
+    }
+}
+.process-instance-headline {
+    &__text {
+        width: 80%;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+    }
+
+    &__code {
+        font-size: 1.2rem;
+    }
+}
+
+.process-instance-title {
+    padding: 0.5rem 2rem;
+    &__headline {
+        display: flex;
+    }
+}
+
+.process-instance-info__entry {
+    padding-top: 2rem;
+
+    &__label {
+        margin-left: 2rem;
+    }
+
+    &__value {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+.process-intance-item__last-step {
+    padding-top: 2rem;
+
+    &__label {
+        margin-left: 2rem;
+    }
+
+    &_info {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}

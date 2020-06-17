@@ -21,6 +21,7 @@ import { ProcessInstancesComponent } from './containers/pages/process-instances/
 import { TaskInstanceItemComponent } from './containers/pages/task-instances/task-instance-item/task-instance-item.component';
 import { ProcessInstanceItemComponent } from './containers/pages/process-instances/process-instance-item/process-instance-item.component';
 import { ProcessStepInstanceComponent } from './containers/pages/process-instances/process-step-instance/process-step-instance.component';
+import { LastStepPipe } from './containers/pages/process-instances/process-instance-item/last-step.pipe';
 
 @NgModule({
     declarations: [
@@ -43,7 +44,8 @@ import { ProcessStepInstanceComponent } from './containers/pages/process-instanc
         ProcessInstancesComponent,
         TaskInstanceItemComponent,
         ProcessInstanceItemComponent,
-        ProcessStepInstanceComponent
+        ProcessStepInstanceComponent,
+        LastStepPipe
     ],
     imports: [CommonModule, SharedModule]
 })

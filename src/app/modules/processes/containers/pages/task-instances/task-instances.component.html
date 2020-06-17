@@ -1,3 +1,8 @@
-<p>
-  task-instances works!
-</p>
+<div class="placy-tasks-instances-page">
+    <app-headline [titleValue]="'Tasks Instances'"></app-headline>
+
+    <div class="tasks-instances">
+        <app-task-instance-item [taskInstance]="taskInstance" *ngFor="let taskInstance of (tasksInstances$ | async)">
+        </app-task-instance-item>
+    </div>
+</div>

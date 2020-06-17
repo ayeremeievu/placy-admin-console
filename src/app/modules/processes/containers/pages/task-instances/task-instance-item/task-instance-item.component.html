@@ -1,3 +1,26 @@
-<p>
-  task-instance-item works!
-</p>
+<div class="task-intance-item">
+    <div class="task-intance-title">
+        <div class="task-intance-title__headline">
+            <div class="task-intance-headline__text">
+                <div class="task-intance-headline__code">
+                    <span class="task-item__label">Code</span><span class="task-code">{{ taskInstance?.code }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-intance-item__info">
+        <div class="task-instance-info__entry">
+            <span class="task-instance-info-entry__label">Status</span>
+            <span class="task-instance-info-entry__value">{{ taskInstance?.status }}</span>
+        </div>
+        <div class="task-instance-info__entry">
+            <span class="task-instance-info-entry__label">Start Date</span>
+            <span class="task-instance-info-entry__value">{{ taskInstance?.startDate }}</span>
+        </div>
+        <div class="task-instance-info__entry">
+            <span class="task-instance-info-entry__label">Finish Date</span>
+            <span class="task-instance-info-entry__value">{{ taskInstance?.finishDate }}</span>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,9 @@
-<p>
-  process-instances works!
-</p>
+<div class="placy-process-instances-page">
+    <app-headline [titleValue]="'Tasks Instances'"></app-headline>
+
+    <div class="process-instances">
+        <app-process-instance-item [processInstance]="processInstance"
+            *ngFor="let processInstance of (processInstances$ | async)">
+        </app-process-instance-item>
+    </div>
+</div>

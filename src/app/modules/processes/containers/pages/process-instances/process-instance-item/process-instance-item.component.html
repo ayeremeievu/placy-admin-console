@@ -1,3 +1,33 @@
-<p>
-  process-instance-item works!
-</p>
+<div class="process-intance-item">
+    <div class="process-intance-title">
+        <div class="process-intance-title__headline">
+            <div class="process-intance-headline__text">
+                <div class="process-intance-headline__code">
+                    <span class="process-item__label">Code</span><span
+                        class="process-code">{{ processInstance?.code }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-intance-item__info">
+        <div class="process-instance-info__entry">
+            <span class="process-instance-info-entry__label">Status</span>
+            <span class="process-instance-info-entry__value">{{ processInstance?.status }}</span>
+        </div>
+        <div class="process-instance-info__entry">
+            <span class="process-instance-info-entry__label">Start Date</span>
+            <span class="process-instance-info-entry__value">{{ processInstance?.startDate }}</span>
+        </div>
+        <div class="process-instance-info__entry">
+            <span class="process-instance-info-entry__label">Finish Date</span>
+            <span class="process-instance-info-entry__value">{{ processInstance?.finishDate }}</span>
+        </div>
+    </div>
+
+    <div class="process-intance-item__last-step">
+        <span class="process-instance-last-step__label">Last step</span>
+        <app-process-step-instance class="process-instance-last-step__info [stepInstance]=" processInstance | lastStep">
+        </app-process-step-instance>
+    </div>
+</div>
