@@ -3,9 +3,15 @@
 
     border-radius: 3px;
     border: 1px solid black;
+    
+    padding-bottom: 1rem;
 
     &__title {
         padding: 1rem 2rem;
+    }
+
+    &__info {
+        margin-bottom: 1rem;
     }
 
     &__params {
@@ -39,7 +45,7 @@
 }
 
 .process-instance-info__entry {
-    padding-top: 2rem;
+    padding-left: 1.5rem;
 
     &__label {
         margin-left: 2rem;
@@ -51,16 +57,16 @@
     }
 }
 
-.process-intance-item__last-step {
-    padding-top: 2rem;
+.process-instance-item__last-step {
+    border-top: 1px solid black;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+}
 
+.process-instance-last-step {
     &__label {
-        margin-left: 2rem;
-    }
-
-    &_info {
-        margin-top: 2rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        padding-left: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
     }
 }

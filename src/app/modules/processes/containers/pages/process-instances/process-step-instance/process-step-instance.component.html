@@ -1,9 +1,9 @@
-<div class="process-step-intance-item">
-    <div class="process-step-intance-title">
-        <div class="process-step-intance-title__headline">
-            <div class="process-step-intance-headline__text">
-                <div class="process-step-intance-headline__code">
-                    <span class="process-item__label">Code</span><span
+<div class="process-step-instance-item">
+    <div class="process-step-instance-title">
+        <div class="process-step-instance-title__headline">
+            <div class="process-step-instance-headline__text">
+                <div class="process-step-instance-headline__code">
+                    <span class="process-item__label">Code: </span><span
                         class="process-code">{{ processStepInstance?.code }}</span>
                 </div>
             </div>
@@ -12,24 +12,20 @@
 
     <div class="process-step-intance-item__info">
         <div class="process-step-instance-info__entry">
-            <span class="process-instance-info-entry__label">Result</span>
+            <span class="process-instance-info-entry__label">Result: </span>
             <span class="process-instance-info-entry__value">{{ processStepInstance?.processStepResult }}</span>
         </div>
         <div class="process-step-instance-info__entry">
-            <span class="process-instance-info-entry__label">Start Date</span>
+            <span class="process-instance-info-entry__label">Start Date: </span>
             <span class="process-instance-info-entry__value">{{ processStepInstance?.startDate }}</span>
         </div>
         <div class="process-step-instance-info__entry">
-            <span class="process-instance-info-entry__label">Finish Date</span>
+            <span class="process-instance-info-entry__label">Finish Date: </span>
             <span class="process-instance-info-entry__value">{{ processStepInstance?.finishDate }}</span>
         </div>
         <div class="process-step-instance-info__entry">
-            <span class="process-instance-info-entry__label">Task Code</span>
+            <span class="process-instance-info-entry__label">Task Code: </span>
             <span class="process-instance-info-entry__value">{{ processStepInstance?.taskInstanceCode }}</span>
         </div>
-    </div>
-
-    <div class="process-intance-item__last-step">
-        <app-process-step-instance [stepInstance]="processInstance | lastStep"></app-process-step-instance>
     </div>
 </div>

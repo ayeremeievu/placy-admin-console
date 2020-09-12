@@ -1,8 +1,5 @@
 .process-step-instance-item {
-    margin-bottom: 2rem;
-
-    border-radius: 3px;
-    border: 1px solid black;
+    padding-top: 0.5rem;
 
     &__title {
         padding: 1rem 2rem;
@@ -27,19 +24,16 @@
     }
 
     &__code {
-        font-size: 1.2rem;
+        // font-size: 1.2rem;
     }
 }
 
 .process-step-instance-title {
-    padding: 0.5rem 2rem;
     &__headline {
-        display: flex;
     }
 }
 
 .process-step-instance-info__entry {
-    padding-top: 2rem;
 
     &__label {
         margin-left: 2rem;

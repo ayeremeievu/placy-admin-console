@@ -1,5 +1,7 @@
 .task-instance-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    padding-bottom: 1rem;
 
     border-radius: 3px;
     border: 1px solid black;
@@ -38,15 +40,18 @@
     }
 }
 
-.task-instance-info__entry {
-    padding-top: 2rem;
+.task-instance-info {
+    
+    &__entry {
+        padding-left: 1.5rem;
 
-    &__label {
-        margin-left: 2rem;
-    }
+        &__label {
+            margin-left: 2rem;
+        }
 
-    &__value {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        &__value {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
     }
 }
